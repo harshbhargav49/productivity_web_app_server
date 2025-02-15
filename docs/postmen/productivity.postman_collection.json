@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "b898baa8-3382-4a8f-a34a-a752719287d5",
+		"name": "productivity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20917763"
+	},
+	"item": [
+		{
+			"name": "todos",
+			"item": [
+				{
+					"name": "create todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E3OTYzNzU3ODI0ODlkOTcxYTQ1MzAiLCJpYXQiOjE3MzkwODE1MDR9.BCZZkxl9FEfoCAtEgEG7YBwoBx5UFxwKmi_1eBnfyzE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Todo\",\n    \"description\": \"Task description\",\n    \"action\": \"Pending\",\n    \"priority\": \"High\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}:{{port}}/api/todos",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E3OTYzNzU3ODI0ODlkOTcxYTQ1MzAiLCJpYXQiOjE3MzkwODE1MDR9.BCZZkxl9FEfoCAtEgEG7YBwoBx5UFxwKmi_1eBnfyzE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}:{{port}}/api/todos/67a85eb37cd47b4107b3e893",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"todos",
+								"67a85eb37cd47b4107b3e893"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a todo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E3OTYzNzU3ODI0ODlkOTcxYTQ1MzAiLCJpYXQiOjE3MzkwODE1MDR9.BCZZkxl9FEfoCAtEgEG7YBwoBx5UFxwKmi_1eBnfyzE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Todo\",\n    \"description\": \"Task description\",\n    \"action\": \"In Progress\",\n    \"priority\": \"High\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}:{{port}}/api/todos/67a84ee18ec2b02b9858ea39",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"todos",
+								"67a84ee18ec2b02b9858ea39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get todo for a user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E3OTYzNzU3ODI0ODlkOTcxYTQ1MzAiLCJpYXQiOjE3MzkwODE1MDR9.BCZZkxl9FEfoCAtEgEG7YBwoBx5UFxwKmi_1eBnfyzE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}:{{port}}/api/todos",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reminder",
+			"item": [
+				{
+					"name": "create remider",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E3OTYzNzU3ODI0ODlkOTcxYTQ1MzAiLCJpYXQiOjE3MzkwODE1MDR9.BCZZkxl9FEfoCAtEgEG7YBwoBx5UFxwKmi_1eBnfyzE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Reminder\",\n    \"description\": \"Reminder description\",\n    \"repeat\": \"Daily\",\n    \"dateTime\": \"2025-02-09T07:51:35.388Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}:{{port}}/api/reminders",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"reminders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a reminder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E3OTYzNzU3ODI0ODlkOTcxYTQ1MzAiLCJpYXQiOjE3MzkwODE1MDR9.BCZZkxl9FEfoCAtEgEG7YBwoBx5UFxwKmi_1eBnfyzE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Reminder 1\",\n    \"description\": \"Reminder description\",\n    \"repeat\": \"Daily\",\n    \"dateTime\": \"2025-02-09T07:51:35.388Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}:{{port}}/api/reminders/67a85eb37cd47b4107b3e893",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"reminders",
+								"67a85eb37cd47b4107b3e893"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get reminders for a user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E3OTYzNzU3ODI0ODlkOTcxYTQ1MzAiLCJpYXQiOjE3MzkwODE1MDR9.BCZZkxl9FEfoCAtEgEG7YBwoBx5UFxwKmi_1eBnfyzE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}:{{port}}/api/reminders",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"reminders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete reminder Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E3OTYzNzU3ODI0ODlkOTcxYTQ1MzAiLCJpYXQiOjE3MzkwODE1MDR9.BCZZkxl9FEfoCAtEgEG7YBwoBx5UFxwKmi_1eBnfyzE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"New Reminder 1\",\n    \"description\": \"Reminder description\",\n    \"repeat\": \"Daily\",\n    \"dateTime\": \"2025-02-09T07:51:35.388Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}:{{port}}/api/reminders/67a85eb37cd47b4107b3e893",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"reminders",
+								"67a85eb37cd47b4107b3e893"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"harsh@gmail.com\",\n    \"password\": \"asdasd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}:{{port}}/api/auth/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"harsh\",\n    \"email\": \"harsh@gmail.com\",\n    \"password\": \"asdasd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}:{{port}}/api/auth/signup",
+							"host": [
+								"{{baseurl}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "todos",
+					"item": [
+						{
+							"name": "get all users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2E3OTYzNzU3ODI0ODlkOTcxYTQ1MzAiLCJ0eXBlIjoiYWRtaW4iLCJpYXQiOjE3MzkwODY3MTN9.tLPD5E7qzIQbo1qCQ51FQkMQLbnPobgYQfVI25a1mAk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseurl}}:{{port}}/admin/users",
+									"host": [
+										"{{baseurl}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
